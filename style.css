@@ -1,0 +1,87 @@
+body {
+  background-color: chocolate;
+  align-items: left;
+  margin: 50px 0 0 30px;
+  padding: 0;
+  justify-content: left;
+  display: flex;
+  height: 100%;
+}
+body #ghost {
+  height: 160px;
+  width: 140px;
+  background-color: black;
+  border-radius: 70px 70px 0px 0px;
+  position: relative;
+  cursor: pointer;
+  animation: levitate 2s infinite ease-in-out;
+}
+body #ghost #head {
+  position: absolute;
+  height: 80px;
+  width: 90px;
+  top: 20px;
+  left: 25px;
+}
+body #ghost #head #eyes {
+  display: flex;
+}
+body #ghost #head #eyes span {
+  height: 20px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  margin: 15px;
+  transition: 0.3s linear;
+}
+body #ghost #head #mouth {
+  height: 20px;
+  width: 40px;
+  border-radius: 0 0 20px 20px;
+  background-color: white;
+  margin: auto;
+  transition: 0.3s linear;
+}
+body #ghost #hands {
+  width: 180px;
+  background-color: black;
+  position: absolute;
+  justify-content: space-around;
+  top: 90px;
+  left: -20px;
+  display: flex;
+  border-radius: 70px;
+}
+body #ghost #hands span {
+  width: 20px;
+  height: 30px;
+  background-color: black;
+}
+body #ghost #feet span {
+  width: 35px;
+  height: 50px;
+  background-color: black;
+  border-radius: 25px;
+  display: block;
+  top: 130px;
+  position: absolute;
+}
+body #ghost #feet span:nth-child(2) {
+  top: 132px;
+  left: 35px;
+}
+body #ghost #feet span:nth-child(3) {
+  top: 132px;
+  left: 70px;
+}
+body #ghost #feet span:nth-child(4) {
+  top: 132px;
+  left: 105px;
+}
+
+@keyframes levitate {
+  50% {
+    transform: translateY(-30px);
+  }
+}
